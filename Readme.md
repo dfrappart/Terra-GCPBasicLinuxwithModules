@@ -1,0 +1,1 @@
+#This config is a simple sample test of provisioning with Terraform to GCP
