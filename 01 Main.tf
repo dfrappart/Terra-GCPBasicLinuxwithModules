@@ -31,3 +31,5 @@ module "AutoVPC" {
   VPCName   = "vpctest02"
   IsAutoVPC = true
 }
+
+
