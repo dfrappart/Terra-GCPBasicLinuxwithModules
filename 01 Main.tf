@@ -32,4 +32,15 @@ module "AutoVPC" {
   IsAutoVPC = true
 }
 
+module "Subnets" {
+  #Module location
+  source = "./Modules/03 Subnet"
 
+  #Module variables
+
+  SubnetCount   = "2"
+  SubnetName = ["subnet1","subnet2"]  
+  CIDRRangesList = ["10.0.0.0/24","10.0.1.0/24"]
+  VPC = "${module.ManualVPC.Name}"
+  SubnetRegionList = "${var.GCPRegions}"
+}

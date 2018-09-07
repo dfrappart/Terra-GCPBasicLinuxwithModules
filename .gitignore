@@ -1,3 +1,5 @@
 authentication.json
 GCPSecrets.tf
 .terraform/
+terraform.tfstate
+terraform.tfstate.backup
