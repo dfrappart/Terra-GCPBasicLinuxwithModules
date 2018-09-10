@@ -1,1 +1,1 @@
-#This config is a simple sample test of provisioning with Terraform to GCP
+#This module deploys a GCP Subnet in a manual VPC
