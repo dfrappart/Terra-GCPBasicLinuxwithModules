@@ -53,16 +53,23 @@ resource "google_compute_subnetwork" "TerraManualSubnet" {
 
 #Module output
 
-/*
-output "Name" {
-  value = "${google_compute_network.TerraManualVPC.name}"
+
+output "Names" {
+  value = ["${google_compute_subnetwork.TerraManualSubnet.*.name}"]
 }
 
-output "GWIPv4" {
-  value = "${google_compute_network.TerraManualVPC.gateway_ipv4}"
+output "CIDRRanges" {
+  value = ["${google_compute_subnetwork.TerraManualSubnet.*.ip_cidr_range}"]
 }
 
-output "URI" {
-  value = "${google_compute_network.TerraManualVPC.self_link}"
+output "GWAddresses" {
+  value = ["${google_compute_subnetwork.TerraManualSubnet.*.gateway_address}"]
 }
-*/
+
+output "Fingerprints" {
+  value = ["${google_compute_subnetwork.TerraManualSubnet.*.fingerprint}"]
+}
+
+output "Selflinks" {
+  value = ["${google_compute_subnetwork.TerraManualSubnet.*.self_link}"]
+}
